@@ -13,7 +13,7 @@ This repository contains solutions for Assignment 1 of Apollo Level 2 Web Develo
 
 ## Problem Solving Overview (`solutions.ts`)
 
-All problem solutions are implemented in `solutions.ts` strictly following explicit parameter and return typing, without using `any`:
+All problem solutions are implemented in `solutions.ts` strictly following explicit parameter and return typing:
 
 1. **`multiplyValue`**: Handles multiplying numbers with optional parameters and proper `0` evaluation.
 2. **`processInput`**: Type narrowing for `string | number | boolean` union types using `typeof`.
