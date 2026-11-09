@@ -1,8 +1,5 @@
-function multiplyValue(value: number, multiplier?: number): number {
-  if (multiplier !== undefined) {
-    return value * multiplier;
-  }
-  return value * 2;
+function multiplyValue(value: number, multiplier: number = 2): number {
+  return value * multiplier;
 }
 
 function processInput(input: string | number | boolean): string | number {
@@ -38,13 +35,12 @@ interface Course {
 
 function getPopularCourses(courses: Course[], minStudents: number): Course[] {
   return courses.filter(
-    (course: Course): boolean =>
-      course.isPublished && course.students >= minStudents
+    (course) => course.isPublished && course.students >= minStudents
   );
 }
 
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
-  return items.map((item: T): T[K] => item[key]);
+  return items.map((item) => item[key]);
 }
 
 class Employee {
@@ -85,4 +81,3 @@ async function validateAgeAsync(age: number): Promise<string> {
     }
   });
 }
-
